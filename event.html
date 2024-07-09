@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event</title>
+</head>
+<body>
+    <header></header>
+
+    <main>
+    <button style="padding: 10px; background-color: blue; color: black; border-radius: 5px;" onclick="document.body.style.backgroundColor = 'red' ">red color</button>
+
+    <button style="padding: 10px; background-color: blue; color: black; border-radius: 5px;"
+    id="yellow">yellow color</button>
+
+    <button style="padding: 10px; background-color: blue; color: black; border-radius: 5px;" 
+     id="blue">Blue color</button>
+
+    <button style="padding: 10px; background-color: blue; color: black; border-radius: 5px;" 
+     id="orange">orange color</button>
+
+    <button style="padding: 10px; background-color: blue; color: black; border-radius: 5px;" 
+     id="green">green color</button>
+
+    <button style="padding: 10px; background-color: blue; color: orange; border-radius: 5px;" 
+     id="pink">pink color</button>
+
+     <h1 id="badhon"> <span id="mostafiz">mostafizur </span> Rahman Badhon</h1>
+
+  
+     <h3 id="money">Money is the most powerfull in the world</h3>
+
+     <input id="input-fild" type="text">
+     <button style="padding: 10px; background-color: blue; color: orange; border-radius: 5px;" 
+     id="updata">Update</button>
+
+
+     <div id="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id hic aliquam non ratione, consequuntur neque nulla dolore fugiat quam magni beatae ipsa veniam dolorum error cumque eius sit ab. Nisi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit adipisci sunt earum deserunt voluptate reiciendis nostrum id quia vitae consequatur tempora, sit rerum dolorum eaque ad voluptatem ullam animi nobis repellat quis aliquid nisi sapiente laborum! Distinctio placeat eius earum quis, repellendus quo qui obcaecati nulla temporibus nemo reprehenderit ad!</p>
+     </div>
+
+     <textarea name="" id="new-comment" cols="60" rows="5"></textarea>
+     <button style="padding: 10px; background-color: blue; color: orange; border-radius: 5px;" 
+     id="postbutton">Post</button>
+    </main>
+
+    <footer></footer>
+    <script>
+    document.getElementById('postbutton').addEventListener('click', function(){
+        const textfild = document.getElementById('new-comment');
+        const newtext = textfild.value;
+
+        const postarea = document.getElementById('container');
+        const newp = document.createElement('h1');
+        newp.innerText = newtext;
+        postarea.appendChild(newp);
+        textfild.value = '';
+    });
+    </script>
+
+
+
+
+    <script src="./dom.js"></script>
+
+  
+</body>
+</html>

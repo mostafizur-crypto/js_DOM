@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D E L E T E</title>
+</head>
+<body>
+    <h1 id="text">Mostafizur Rahman Badhon</h1>
+    <input id="input-fild" type="text" placeholder="please write delete">
+    <button id="remove" disabled >Delete</button>
+
+    <!-- js start-->
+     <script>
+         document.getElementById('input-fild').addEventListener('keyup' , function(text){
+           const newtext = text.target.value;
+          const removebtn =  document.getElementById('remove');
+
+          if(newtext === 'delete'){
+            removebtn.removeAttribute('disabled')
+          }else{
+            removebtn.setAttribute('disabled', true)
+          }
+
+            
+         })
+
+        
+        document.getElementById('remove').addEventListener('click' , function(){
+            const deleteText = document.getElementById('text');
+            deleteText.style.display = 'none'
+        })
+     </script>
+</body>
+</html>
