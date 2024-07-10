@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list-container">
+    <li>Lorem, ipsum dolor.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni dolores inventore neque!</li>
+    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias?</li>
+    <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+    </ul>
+
+    <button id="new-item">Add New</button>
+    <button id="new-items">Add New2</button>
+
+    <script>
+        document.getElementById('list-container').addEventListener('click' , function(event){
+              event.target.parentNode.removeChild(event.target);
+        })
+
+        document.getElementById('new-item').addEventListener('click' , function(){
+            const new_item = document.getElementById('list-container');
+
+            const li = document.createElement('li');
+            li.innerText = 'mostafizur rahman badhon';
+            new_item.appendChild(li);
+        })
+        document.getElementById('new-items').addEventListener('click' , function(){
+            const new_item = document.getElementById('list-container');
+
+            const li = document.createElement('h1');
+            li.innerText = 'Badhon Rahman Mostafiz';
+            new_item.appendChild(li);
+        })
+    </script>
+</body>
+</html>
